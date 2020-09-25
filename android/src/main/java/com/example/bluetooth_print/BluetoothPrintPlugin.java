@@ -326,7 +326,7 @@ public class BluetoothPrintPlugin implements MethodCallHandler, RequestPermissio
           if (DeviceConnFactoryManager.getDeviceConnFactoryManagers()[id].getCurrentPrinterCommand() == PrinterCommand.ESC) {
             DeviceConnFactoryManager.getDeviceConnFactoryManagers()[id].sendDataImmediately(PrintContent.mapToReceipt(config, list));
           }else if (DeviceConnFactoryManager.getDeviceConnFactoryManagers()[id].getCurrentPrinterCommand() == PrinterCommand.TSC) {
-            DeviceConnFactoryManager.getDeviceConnFactoryManagers()[id].sendDataImmediately("SIZE 4,2.5" +"\n"+ "GAP 0,0"+"\n"+"DIRECTION 1" +"\n"+ "CLS" +"\n"+ "TEXT 100,100,\"3\",0,1,1,\"REVERSE\"" +"\n"+ "REVERSE 90,90,128,40" +"\n"+ "PRINT 1,1");
+            DeviceConnFactoryManager.getDeviceConnFactoryManagers()[id].sendDataImmediately(PrintContent.mapToLabel(config, list));
           }else if (DeviceConnFactoryManager.getDeviceConnFactoryManagers()[id].getCurrentPrinterCommand() == PrinterCommand.CPCL) {
             DeviceConnFactoryManager.getDeviceConnFactoryManagers()[id].sendDataImmediately(PrintContent.mapToCPCL(config, list));
           }
