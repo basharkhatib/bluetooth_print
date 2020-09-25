@@ -112,7 +112,6 @@ public class PrintContent {
 
             final String str = "SIZE 4,2.5" +"\n"+ "GAP 0,0"+"\n"+"DIRECTION 1" +"\n"+ "CLS" +"\n"+ "TEXT 100,100,\"3\",0,1,1,\"REVERSE\"" +"\n"+ "REVERSE 90,90,128,40" +"\n"+ "PRINT 1,1";
             tsc.addStrToCommand(str, "GB2312");
-            tsc.addStrToCommand();
 
 //            // 设置标签尺寸宽高，按照实际尺寸设置 单位mm
 //            tsc.addSize(width, height);
